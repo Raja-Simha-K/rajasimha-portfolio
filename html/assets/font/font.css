@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Neue Regrade';
+    src: local('Neue Regrade Regular'), local('NeueRegrade-Regular'),
+        url('NeueRegrade-Regular.woff2') format('woff2'),
+        url('NeueRegrade-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Regrade';
+    src: local('Neue Regrade Bold'), local('NeueRegrade-Bold'),
+        url('NeueRegrade-Bold.woff2') format('woff2'),
+        url('NeueRegrade-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Regrade';
+    src: local('Neue Regrade Semibold'), local('NeueRegrade-Semibold'),
+        url('NeueRegrade-Semibold.woff2') format('woff2'),
+        url('NeueRegrade-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

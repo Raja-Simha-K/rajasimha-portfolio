@@ -1,0 +1,459 @@
+@charset "UTF-8";
+/*
+  Author: Raja Simha K
+  Contact: Rajasima58@gmail.com
+  Date: March 18, 2024.
+  Description: The Default CSS file for the portfolio.
+*/
+
+//row column Grid 
+@import 'default-grid';
+//color and font variables
+@import 'theme-default';
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  font-family: $secondaryFont;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  overflow-x: hidden;
+  font-size: 16px;
+  line-height: 150%;
+  color: $primaryColor;
+  background: $whiteColor;
+}
+a{
+  text-decoration: none;
+  color: $primaryColor;
+}
+ul,li{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 150%;
+}
+@mixin headFont{
+  line-height: 100%;
+  margin-bottom: 24px;
+  font-family: $primaryFont;
+}
+h1{
+  font-size: 61.04px;
+  @include headFont;
+}
+h2{
+  font-size: 48.83px;
+  @include headFont;
+}
+h3{
+  font-size: 39.06px;
+  @include headFont;
+}
+h4{
+  font-size: 31.25px;
+  @include headFont;
+}
+h5{
+  font-size: 25px;
+  @include headFont;
+}
+h6{
+  font-size: 20px;
+  @include headFont;
+}
+p{
+  font-size: 16px;
+  line-height: 180%;
+  margin-bottom: 16px;
+}
+small{
+  font-size: 12px;
+}
+section{
+  padding: 80px 0;
+}
+.gray-bg{
+  background-color: $grayColor;
+}
+button{display:block;border: 0;background-color: $whiteColor;}
+.i-fw{
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+  }
+}
+.i-16-9{
+  position: relative;
+  &:before{
+    content: "";
+    padding-top: 56.25%;
+    display: block;
+  }
+  img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+  }
+}
+.tx-s{
+  p{max-width: 600px;}
+}
+// Hamburger Menu
+.nav-bt{
+  display: block;
+  width: 40px;
+  height: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  margin-left: 64px;
+  span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $primaryColor;
+    border-radius: 100px;
+    position: absolute;
+    left: 0;
+    transition: all 300ms ease-in;
+    pointer-events: none;
+    &:first-child{
+      top: 0;
+    }
+    &:nth-of-type(2){
+      top:50%;
+      transform: translateY(-50%);
+    }
+    &:last-child{
+      bottom: 0;
+    }
+  }
+  &.open{
+    span{
+      &:first-child{
+        top:50%;
+        transform: translateY(-50%) rotate(30deg);
+      }
+      &:nth-of-type(2){
+        width:0;
+        left:50%;
+        transform: translateX(-50%);
+      }
+      &:last-child{
+        bottom:50%;
+        transform: translateY(50%) rotate(-30deg);
+      }
+    }
+  }
+}
+// navbar menu
+.nav-a{
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  
+  figure{
+    width: 60px;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+.nav-b{
+  display: flex;
+  align-items: center;
+}
+.nav-c{
+  margin-left: auto;
+  ul{
+    display: flex;
+    li{
+      margin: 0 32px;
+    }
+    a{
+      font-weight: 600;
+      position: relative;
+      padding: 8px;
+      &:before{
+        content: "";
+        display: block;
+        width: 12px;
+        height: 2px;
+        background-color: $primaryColor;
+        // border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: right 300ms ease-out , opacity 100ms ease 100ms;
+      }
+      &:hover,&.active{
+        &:before{
+          right: calc(100% + 8px); 
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+// Footer
+.foo{
+  .foo-b{
+    span{
+      display: inline-block;
+      padding-bottom: 8px;
+      margin-bottom: 40px;
+      position: relative;
+      &:after{
+        content:"";
+        display: inline-block;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 1px;
+        background-color: $primaryColor;
+        border-radius: 50px;
+      }
+
+    }
+  }
+  .foo-c{
+    h1{
+      font-size: 7vw;
+      margin-bottom: 80px;
+      span{
+        padding-left: 0;
+      }
+    }
+  }
+  .foo-d{
+    text-align: center;
+    a{
+      font-family: $primaryFont;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 100%;
+      letter-spacing: 2px;
+      text-align: center;
+      padding: 32px 48px;
+      border:2px solid $primaryColor;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      width: 511px;
+      height: 96px;
+      overflow: hidden;
+      position: relative;
+      transition: all 300ms ease 300ms;
+      .foo-moon-space{
+        display: inline-block;
+        width: 0;
+        flex-shrink: 0;
+        transition: width 300ms ease;
+      }
+      .foo-moon{
+        display: inline-block;
+        vertical-align: middle;
+        width: 80px;
+        flex-shrink: 0;
+        height: 80px;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: inset -10px -10px 15px #aaaaaa, 0 0 20px 5px rgba(255,255,255,0.2);
+        transform: translate(-50%,-50%) rotate(-15deg);
+        position: absolute;
+        top: 150%;
+        left: 50%;
+        transition: all 300ms ease 150ms;
+        &:before,&:after{
+          content:"";
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-image: url("data:image/svg+xml,%3Csvg width='101' height='100' viewBox='0 0 101 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='19.5' cy='28.5' r='2.5' fill='%23ADB5BD'/%3E%3Ccircle cx='24' cy='48' r='1' fill='%23ADB5BD'/%3E%3Ccircle cx='31' cy='72' r='1' fill='%23ADB5BD'/%3E%3Ccircle cx='46.5' cy='24.5' r='0.5' fill='%23ADB5BD'/%3E%3Ccircle cx='60.5' cy='67.5' r='0.5' fill='%23ADB5BD'/%3E%3Ccircle cx='56.5' cy='46.5' r='7.5' fill='%23ADB5BD'/%3E%3Ccircle cx='8' cy='65' r='4' fill='%23ADB5BD'/%3E%3Ccircle cx='54' cy='82' r='4' fill='%23ADB5BD'/%3E%3Ccircle cx='91.3009' cy='10.2355' r='1' transform='rotate(40.8805 91.3009 10.2355)' fill='%23ADB5BD'/%3E%3Ccircle cx='80.8859' cy='32.9628' r='1' transform='rotate(40.8805 80.8859 32.9628)' fill='%23ADB5BD'/%3E%3Ccircle cx='68.0775' cy='12.6171' r='4' transform='rotate(40.8805 68.0775 12.6171)' fill='%23ADB5BD'/%3E%3Ccircle cx='91.934' cy='58.3977' r='6' transform='rotate(40.8805 91.934 58.3977)' fill='%23ADB5BD'/%3E%3C/svg%3E%0A");
+          background-size: contain;
+          background-repeat: repeat-x;
+          animation: slideX 5s infinite linear;
+        }
+        &:after{
+          position: absolute;
+          top: 0;
+          left: 100%;
+        }
+      }
+      &:hover{
+        background-color: $primaryColor;
+        color: $whiteColor;
+        padding: 0;
+        .foo-moon-space{
+          width: 80px;
+          margin: 0 20px;
+        }
+        .foo-moon{
+          top: 50%;
+        }
+      }
+    }
+  }
+}
+@keyframes slideX {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+.cpr{
+  background-color: $secondaryColor;
+  padding: 16px 0;
+  .cpr-a{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px;
+    a{
+      font-size: 12px;
+      
+    }
+  }
+}
+
+
+// Lenis
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+// Cursor
+html{
+  cursor: none;
+}
+.cursor-dot{
+  pointer-events: none;
+  user-select: none;
+  width: 10px;
+  height: 10px;
+  background: $primaryColor;
+  border: 0;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+}
+.cursor{
+  pointer-events: none;
+  user-select: none;
+  width: 40px;
+  height: 40px;
+  background: $whiteColor;
+  border: 0;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+  mix-blend-mode: difference;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  transition: left 100ms ease, right 100ms ease, transform 500ms ease;
+}
+// Custom Cursor
+.cursorScaleUp{
+  transform: translate(-50%,-50%) scale(4);
+}
+.cursorShowLink{
+  display: block;
+  transform: translate(-50%,-50%) scale(2);
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='36' height='16' viewBox='0 0 36 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.02942 7C0.477134 7 0.0294189 7.44772 0.0294189 8C0.0294189 8.55228 0.477134 9 1.02942 9V7ZM35.6776 8.70711C36.0682 8.31658 36.0682 7.68342 35.6776 7.29289L29.3137 0.928932C28.9232 0.538408 28.29 0.538408 27.8995 0.928932C27.509 1.31946 27.509 1.95262 27.8995 2.34315L33.5563 8L27.8995 13.6569C27.509 14.0474 27.509 14.6805 27.8995 15.0711C28.29 15.4616 28.9232 15.4616 29.3137 15.0711L35.6776 8.70711ZM1.02942 9L34.9705 9V7L1.02942 7V9Z' fill='%23000000'/%3E%3C/svg%3E%0A");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(-30deg);
+  }
+}
+.cursorShowArrow{
+  transition: transform .5s ease;
+}
+.cursorTargetShow{
+  transform: translate(-50%,-50%) scale(1);
+  mix-blend-mode: unset;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath d='M256 0c17.7 0 32 14.3 32 32V42.4c93.7 13.9 167.7 88 181.6 181.6H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H469.6c-13.9 93.7-88 167.7-181.6 181.6V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V469.6C130.3 455.7 56.3 381.7 42.4 288H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H42.4C56.3 130.3 130.3 56.3 224 42.4V32c0-17.7 14.3-32 32-32zM107.4 288c12.5 58.3 58.4 104.1 116.6 116.6V384c0-17.7 14.3-32 32-32s32 14.3 32 32v20.6c58.3-12.5 104.1-58.4 116.6-116.6H384c-17.7 0-32-14.3-32-32s14.3-32 32-32h20.6C392.1 165.7 346.3 119.9 288 107.4V128c0 17.7-14.3 32-32 32s-32-14.3-32-32V107.4C165.7 119.9 119.9 165.7 107.4 224H128c17.7 0 32 14.3 32 32s-14.3 32-32 32H107.4zM256 224a32 32 0 1 1 0 64 32 32 0 1 1 0-64z' fill='%23ff0000' /%3E%3C/svg%3E");
+  background-size: contain;  
+}
+
+.word {
+  position: relative;
+  .line-mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    opacity: 0.8;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+  }
+}
+.b-bg{
+  background-color: $primaryColor;
+}
+.mq-con{
+  -webkit-font-smoothing: antialiased;
+  width: fit-content;
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+  .mq-in{
+      padding-left:24px
+  }
+}
