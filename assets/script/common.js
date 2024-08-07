@@ -1,30 +1,30 @@
 // Navbar ham menu
-document.addEventListener('DOMContentLoaded', function() {
-    const button = document.querySelector('.nav-bt');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const button = document.querySelector('.nav-bt');
 
-    function toggleClass() {
-        if (button.classList.contains('open')) {
-        button.classList.remove('open');
-        } else {
-        button.classList.add('open');
-        }
-    }
+//     function toggleClass() {
+//         if (button.classList.contains('open')) {
+//         button.classList.remove('open');
+//         } else {
+//         button.classList.add('open');
+//         }
+//     }
 
-    function handleClick(event) {
-        if (event.target.classList.contains('nav-bt')) {
-        toggleClass();
-        } else if (!event.target.closest('.nav-bt')) {
-        button.classList.remove('open');
-        }
-    }
+//     function handleClick(event) {
+//         if (event.target.classList.contains('nav-bt')) {
+//         toggleClass();
+//         } else if (!event.target.closest('.nav-bt')) {
+//         button.classList.remove('open');
+//         }
+//     }
 
-    button.addEventListener('click', function(event) {
-        toggleClass();
-        event.stopPropagation();
-    });
+//     button.addEventListener('click', function(event) {
+//         toggleClass();
+//         event.stopPropagation();
+//     });
 
-    document.addEventListener('click', handleClick);
-});
+//     document.addEventListener('click', handleClick);
+// });
   
 // Star Glitter
 function getRandom(min, max) {
@@ -378,3 +378,12 @@ gsap.utils.toArray(".prlx img").forEach((imagePx, i) => {
     });
 });
 
+// ---------------------------------------------------
+// Smooth scroll
+var scBtn = document.getElementById('scrollToButton');
+scBtn.addEventListener('click', function(event) {
+    event.preventDefault;
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+    lenis.scrollTo(scrollToSection);
+});
