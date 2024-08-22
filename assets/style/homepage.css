@@ -148,6 +148,9 @@
   position: absolute;
 }
 
+.cb {
+  padding-top: 50px;
+}
 .cb p {
   font-family: "Neue Regrade", sans-serif;
   font-size: 8vw;
@@ -163,9 +166,9 @@
 }
 .cb p span {
   width: 0;
-  height: 100px;
+  height: 8vw;
   display: inline-block;
-  vertical-align: baseline;
+  vertical-align: text-top;
   transition: width 0.5s ease;
 }
 .cb p span img {

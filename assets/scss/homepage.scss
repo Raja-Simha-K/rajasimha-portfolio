@@ -134,7 +134,7 @@
     }
 }
 .cb{
-    // padding-bottom: 320px;
+    padding-top: 50px;
     p{
         font-family: $primaryFont;
         font-size: 8vw;
@@ -149,9 +149,9 @@
         }
         span{
             width: 0;
-            height: 100px;
+            height: 8vw;
             display: inline-block;
-            vertical-align: baseline;
+            vertical-align: text-top;
             transition: width 0.5s ease;
             img{
                 width: 100%;

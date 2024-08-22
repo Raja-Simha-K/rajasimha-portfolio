@@ -272,7 +272,7 @@ servExpand.forEach((section) =>{
     });
     let servExTextAll = Array.from(section.querySelectorAll("span"));
     stServEx.to(servExTextAll,{
-        width:"100px",
+        width:"8vw",
         stagger: 5,
     });
 })
