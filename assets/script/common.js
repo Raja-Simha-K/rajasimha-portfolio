@@ -139,7 +139,7 @@ mouseMgMove = (e) => {
     var mouseMgRect = e.currentTarget.getBoundingClientRect();
     mouseMgX = e.clientX - (mouseMgRect.left + mouseMgRect.width / 2);
     mouseMgY = e.clientY - (mouseMgRect.top + mouseMgRect.height / 2);
-    gsap.to(cursorMgTxt, {
+    gsap.to(e.currentTarget, {
         x: mouseMgX,
         y: mouseMgY,
         duration:1,
@@ -147,7 +147,7 @@ mouseMgMove = (e) => {
     });
 }
 mouseMgLeave = (e) => {
-    gsap.to(cursorMgTxt, {
+    gsap.to(e.currentTarget, {
         x: 0,
         y: 0,
         duration:1,
@@ -237,8 +237,8 @@ bgCh.forEach(function(section){
     let stBg = gsap.timeline({
         scrollTrigger:{
             trigger: section,
-            start: "top 50%",
-            end: "bottom 50%",
+            start: "top 70%",
+            end: "bottom 100%",
             scrub: true,
             onEnter: function() {
                 gsap.to('body, .line-mask', { backgroundColor: moEcBgData, ease: "linear"});
@@ -335,18 +335,10 @@ contentElements.forEach((el, position) => {
         ease: 'none',
         startAt: {filter: 'brightness(100%) contrast(100%)'},
         filter: isLast ? 'none' : 'brightness(60%) contrast(135%)',
-        yPercent: isLast ? 0 : -15,
-        onUpdate: function() {
-            var yearText = el.querySelector('.ec-detail').getAttribute('data-year');
-            changeYear(yearText);
-        },
+        yPercent: isLast ? 0 : -15,       
     }, 0);
 
 });
-// Year update function
-function changeYear(yearText){
-    document.getElementById('ec-year-id').textContent = yearText;
-}
 
 // Image Parallax
 gsap.utils.toArray(".ec-image img").forEach((imagePx, i) => {

@@ -1262,6 +1262,26 @@ button {
   background-color: #FFFFFF;
 }
 
+a.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #000000;
+  color: #000000;
+  font-size: 20px;
+  border-radius: 50px;
+}
+a.btn:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url("data:image/svg+xml,%3Csvg width='36' height='16' viewBox='0 0 36 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.02942 7C0.477134 7 0.0294189 7.44772 0.0294189 8C0.0294189 8.55228 0.477134 9 1.02942 9V7ZM35.6776 8.70711C36.0682 8.31658 36.0682 7.68342 35.6776 7.29289L29.3137 0.928932C28.9232 0.538408 28.29 0.538408 27.8995 0.928932C27.509 1.31946 27.509 1.95262 27.8995 2.34315L33.5563 8L27.8995 13.6569C27.509 14.0474 27.509 14.6805 27.8995 15.0711C28.29 15.4616 28.9232 15.4616 29.3137 15.0711L35.6776 8.70711ZM1.02942 9L34.9705 9V7L1.02942 7V9Z' fill='%23000000'/%3E%3C/svg%3E%0A");
+  width: 24px;
+  height: 12px;
+  margin-left: 8px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 .i-fw {
   display: block;
   width: 100%;

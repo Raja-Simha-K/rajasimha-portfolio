@@ -178,123 +178,6 @@
   object-position: center;
 }
 
-.da {
-  position: relative;
-  padding-top: 200px;
-}
-.da .db {
-  color: #FFFFFF;
-  position: relative;
-}
-.da .db p, .da .db blockquote {
-  font-size: 4vw;
-  font-family: "Neue Regrade", sans-serif;
-  font-weight: 700;
-  line-height: 125%;
-}
-.da .db span, .da .db blockquote {
-  font-style: italic;
-  color: #CF7500;
-}
-.da .db a {
-  font-style: italic;
-  text-decoration: underline;
-  color: #CF7500;
-}
-.da .db blockquote {
-  padding-top: 160px;
-}
-
-.dc {
-  padding-top: 80px;
-  position: relative;
-  overflow: hidden;
-}
-.dc p {
-  color: transparent;
-  font-family: "Neue Regrade", sans-serif;
-  font-size: 8vw;
-  font-weight: 700;
-  white-space: nowrap;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 2px #FFFFFF;
-}
-.dc p span {
-  -webkit-text-fill-color: #FFFFFF;
-}
-
-.d-s {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.d-s .star {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background-color: #FFFFFF;
-  border-radius: 50%;
-  opacity: 0;
-  animation: sparkle 2s infinite alternate;
-}
-
-@keyframes sparkle {
-  50% {
-    opacity: 0.4;
-    transform: scale(0.5);
-    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.368627451);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1);
-    box-shadow: 0px 0px 0px 1px #FFFFFF;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1.5);
-    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.368627451);
-  }
-}
-.sparkle-star span {
-  display: block;
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  animation: sparkle-alter 500ms infinite alternate;
-}
-.sparkle-star span:nth-of-type(2) {
-  left: auto;
-  right: 15%;
-  top: 20%;
-  animation-delay: 500ms;
-}
-.sparkle-star span:last-child {
-  top: auto;
-  left: 35%;
-  bottom: 10%;
-  animation-delay: 250ms;
-}
-.sparkle-star span img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-@keyframes sparkle-alter {
-  50% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
 .ea .eb {
   text-align: center;
   margin-bottom: 80px;
@@ -313,33 +196,6 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-.ea .ec-year {
-  text-align: right;
-  display: block;
-  position: sticky;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.4);
-  padding: 40px 0;
-  text-align: center;
-  z-index: 3;
-}
-.ea .ec-year span {
-  position: relative;
-  display: inline-block;
-  font-weight: 600;
-}
-.ea .ec-year span::before {
-  content: "";
-  width: 8px;
-  height: 2px;
-  background-color: #000000;
-  position: absolute;
-  top: 50%;
-  right: calc(100% + 8px);
-  transform: translateY(-50%);
 }
 
 .ec-wrap {
@@ -363,29 +219,38 @@
   height: 100%;
   padding-top: 80px;
   padding-left: 32px;
+  padding-bottom: 48px;
 }
-.ec .ec-detail span {
+@media (max-width: 991px) {
+  .ec .ec-detail {
+    padding: 0 32px 32px;
+  }
+}
+.ec .ec-detail .ec-tool {
+  margin-bottom: 48px;
+}
+.ec .ec-detail .ec-tool div {
+  display: inline-block;
+}
+.ec .ec-detail .ec-tool div span {
+  display: inline-block;
   font-size: 16px;
   line-height: 100%;
-  color: #000000;
-  padding-bottom: 8px;
-  margin-bottom: 80px;
-  border-bottom: 2px solid #000000;
-}
-.ec .ec-detail div {
-  align-self: flex-end;
-}
-.ec .ec-detail div p {
-  font-weight: 700;
   color: #000000;
   padding: 8px 24px;
   border: 1px solid #000000;
   border-radius: 50px;
-  min-width: 150px;
-  text-align: center;
+  margin-right: 16px;
+  margin-bottom: 16px;
 }
-.ec .ec-detail a {
+.ec .ec-detail .ec-content {
   margin-top: auto;
+}
+.ec .ec-detail .ec-content p {
+  margin-bottom: 24px;
+}
+.ec .ec-image {
+  height: 100%;
 }
 .ec .ec-image figure {
   width: 110%;
@@ -393,6 +258,11 @@
   position: relative;
   border-radius: 30px;
   overflow: hidden;
+}
+@media (max-width: 991px) {
+  .ec .ec-image figure {
+    width: 100%;
+  }
 }
 .ec .ec-image figure:before {
   content: "";
@@ -413,8 +283,18 @@
 .ec.ec-rev .ec-detail {
   padding-right: 32px;
 }
+@media (max-width: 991px) {
+  .ec.ec-rev .ec-detail {
+    padding: 0 32px 32px;
+  }
+}
 .ec.ec-rev .ec-image figure {
   margin-left: -10%;
+}
+@media (max-width: 991px) {
+  .ec.ec-rev .ec-image figure {
+    margin-left: 0;
+  }
 }
 
 .hr {
