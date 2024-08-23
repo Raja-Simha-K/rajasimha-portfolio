@@ -10,12 +10,19 @@
     h1{
         font-size: 8vw;
         font-weight: 700;
+        @media (max-width:600px) {
+            font-size: 12vw;
+        }
         span{
             font-style: italic;
             display: inline-block;
             color: $accentFirst;
             padding-left: 30%;
             position: relative;
+            @media (max-width:600px) {
+                display: block;
+                padding-left: 0;
+            }
             &:before{
                 content: "";
                 display: block;
@@ -28,6 +35,10 @@
                 background-size: contain;
                 background-repeat: no-repeat;
                 animation: rotate 10s linear infinite;
+                @media (max-width:600px) {
+                    left: auto;
+                    right: 0;
+                }
             }
         }
     }
@@ -44,11 +55,20 @@
     figure{
         border-radius: 50px;
         overflow: hidden;
+        @media (max-width:600px) {
+            border-radius: 20px;
+        }
+        img{
+            min-height: 400px;
+        }
     }
 }
 .ae{
     width: 100%;
     border-bottom: 1px solid $grayColor;
+    display: flex;
+    align-items: center;
+    gap: 24px;
     li{
         &:last-child{
             margin-left: auto;
@@ -91,6 +111,9 @@
     right: 10%;
     transform: translateY(-50%);
     overflow: hidden;
+    @media (max-width:600px) {
+        width: 15vw;
+    }
     span{
         font-size: 16px;
         font-weight: 700;
@@ -171,6 +194,9 @@
         z-index: 1;
         position: sticky;
         top: 0;
+        @media (max-width: 600px) {
+            height: 35vh;
+        }
         span{
             font-size: 12vw;
             font-family: $primaryFont;
@@ -192,10 +218,17 @@
     position: sticky;
     top: 0;
     box-shadow: 0 -10px 40px rgba($color: #000000, $alpha: 0.1); 
+    @media (max-width:991px) {
+        overflow: hidden;
+    }
 }
 .ec{
     padding-top: 80px;
     padding-bottom: 80px;
+    @media (max-width: 600px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
     .ec-detail{
         display: flex;
         flex-direction: column;
@@ -209,18 +242,24 @@
         }
         .ec-tool{
             margin-bottom: 48px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            @media (max-width: 600px) {
+                gap: 8px;
+            }
             div{
-                display: inline-block;
+                display: block;
+                flex-shrink: 0;
                 span{
-                    display: inline-block;
+                    display: block;
                     font-size: 16px;
                     line-height: 100%;
                     color: $primaryColor;
                     padding: 8px 24px;
                     border: 1px solid $primaryColor;
                     border-radius: 50px;
-                    margin-right: 16px;
-                    margin-bottom: 16px;
                 }
             }
         }
