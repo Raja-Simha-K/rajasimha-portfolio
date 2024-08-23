@@ -11,12 +11,23 @@
   font-size: 8vw;
   font-weight: 700;
 }
+@media (max-width: 600px) {
+  .ab h1 {
+    font-size: 12vw;
+  }
+}
 .ab h1 span {
   font-style: italic;
   display: inline-block;
   color: #CF7500;
   padding-left: 30%;
   position: relative;
+}
+@media (max-width: 600px) {
+  .ab h1 span {
+    display: block;
+    padding-left: 0;
+  }
 }
 .ab h1 span:before {
   content: "";
@@ -30,6 +41,12 @@
   background-size: contain;
   background-repeat: no-repeat;
   animation: rotate 10s linear infinite;
+}
+@media (max-width: 600px) {
+  .ab h1 span:before {
+    left: auto;
+    right: 0;
+  }
 }
 
 @keyframes rotate {
@@ -51,10 +68,21 @@
   border-radius: 50px;
   overflow: hidden;
 }
+@media (max-width: 600px) {
+  .ad figure {
+    border-radius: 20px;
+  }
+}
+.ad figure img {
+  min-height: 400px;
+}
 
 .ae {
   width: 100%;
   border-bottom: 1px solid #ADB5BD;
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 .ae li:last-child {
   margin-left: auto;
@@ -94,6 +122,11 @@
   right: 10%;
   transform: translateY(-50%);
   overflow: hidden;
+}
+@media (max-width: 600px) {
+  .sc-a {
+    width: 15vw;
+  }
 }
 .sc-a span {
   font-size: 16px;
@@ -186,6 +219,11 @@
   position: sticky;
   top: 0;
 }
+@media (max-width: 600px) {
+  .ea .eb {
+    height: 35vh;
+  }
+}
 .ea .eb span {
   font-size: 12vw;
   font-family: "Neue Regrade", sans-serif;
@@ -207,10 +245,21 @@
   top: 0;
   box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
 }
+@media (max-width: 991px) {
+  .ec-wrap {
+    overflow: hidden;
+  }
+}
 
 .ec {
   padding-top: 80px;
   padding-bottom: 80px;
+}
+@media (max-width: 600px) {
+  .ec {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 .ec .ec-detail {
   display: flex;
@@ -228,20 +277,28 @@
 }
 .ec .ec-detail .ec-tool {
   margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+@media (max-width: 600px) {
+  .ec .ec-detail .ec-tool {
+    gap: 8px;
+  }
 }
 .ec .ec-detail .ec-tool div {
-  display: inline-block;
+  display: block;
+  flex-shrink: 0;
 }
 .ec .ec-detail .ec-tool div span {
-  display: inline-block;
+  display: block;
   font-size: 16px;
   line-height: 100%;
   color: #000000;
   padding: 8px 24px;
   border: 1px solid #000000;
   border-radius: 50px;
-  margin-right: 16px;
-  margin-bottom: 16px;
 }
 .ec .ec-detail .ec-content {
   margin-top: auto;

@@ -42,19 +42,24 @@ stars.forEach((star, index) => {
 });
 
 // -----------------------------------------------------------------
-// GSAP
-gsap.registerPlugin(ScrollTrigger);  //initialize scroll trigger
 
-// Lenis scroll trigger using GSAP
-const lenis = new Lenis({
-    lerp:0.05, //lower the value smoother the scroll(0 - 0.1)
-    smooth:true,
-})
-lenis.on('scroll', ScrollTrigger.update)
-gsap.ticker.add((time)=>{
-    lenis.raf(time * 1000)
-})
-gsap.ticker.lagSmoothing(0)
+    // GSAP
+    gsap.registerPlugin(ScrollTrigger);  //initialize scroll trigger
+
+    // Lenis scroll trigger using GSAP
+    const lenis = new Lenis({
+        lerp:0.05, //lower the value smoother the scroll(0 - 0.1)
+        smooth:true,
+    })
+    document.addEventListener("DOMContentLoaded", () => {
+        lenis.on('scroll', ScrollTrigger.update)
+    });
+    gsap.ticker.add((time)=>{
+        lenis.raf(time * 1000)
+    })
+    gsap.ticker.lagSmoothing(0)
+    
+
 // -----------------------------------------------------------------
 
 // -----------------------------------------------------------------
@@ -313,7 +318,7 @@ gsap.to(wrkTitleText,{
     scrollTrigger:{
         trigger: wrkTitleCon,
         start: "top bottom",
-        end: "bottom bottom",
+        end: "top top",
         scrub: true,
     }
 });
