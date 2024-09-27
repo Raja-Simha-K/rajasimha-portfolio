@@ -427,6 +427,11 @@
   color: #FFFFFF;
   position: relative;
 }
+.da .db h2 {
+  font-size: 8vw;
+  text-align: center;
+  margin-bottom: 4vw;
+}
 .da .db p, .da .db blockquote {
   font-size: 4vw;
   font-family: "Neue Regrade", sans-serif;

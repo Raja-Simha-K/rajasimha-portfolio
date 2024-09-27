@@ -181,6 +181,7 @@ function runSplit() {
     });
 }
 runSplit();
+
 // Create staggered animation
 function createAnimation(section) {
     let allMasks = Array.from(section.querySelectorAll(".word .line-mask"));
@@ -199,6 +200,61 @@ function createAnimation(section) {
     });
 }
 // -----------------------------------------------------------------
+
+
+// -----------------------------------------------------------------
+
+if(document.querySelector('.word-split')){
+    let wordSplit = new SplitType('.word-split', {
+        types: "lines,chars"
+    });
+    let allMasks = document.querySelectorAll(".word-split .char");
+    let tl = gsap.timeline({
+        scrollTrigger: {
+        trigger: allMasks,
+        start: "top 120%",
+        end: "top 20%",
+        scrub: 1,
+        }
+    });
+    tl.from(allMasks, {
+        opacity: 0,
+        yPercent: 100,
+        duration: 2.5,
+        stagger: 0.1,
+        ease: "elastic.out(2,1)",
+    });
+}
+
+if(document.querySelector('.reveal-up')){
+    let wordSplit = new SplitType('.reveal-up', {
+        types: "lines, words, chars"
+    });
+    let revealLine = document.querySelectorAll(".reveal-up");
+    revealLine.forEach((e)=>{
+        let revealChar = e.querySelectorAll(".reveal-up .word");
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: revealChar,
+                start: "top 90%",
+                end: "top 30%",
+                scrub: 'true'
+            }
+        });
+        tl.from(revealChar, {
+            yPercent:50,
+            opacity: 0,
+            // rotate: 45,
+            stagger: 0.02,
+            duration: 0.5,
+            ease: "power4.out",
+        });
+    })
+ 
+}
+
+// -----------------------------------------------------------------
+
 
 // -----------------------------------------------------------------
 // moon eclipse on scroll
@@ -243,7 +299,7 @@ bgCh.forEach(function(section){
         scrollTrigger:{
             trigger: section,
             start: "top 70%",
-            end: "bottom 100%",
+            end: "bottom center",
             scrub: true,
             onEnter: function() {
                 gsap.to('body, .line-mask', { backgroundColor: moEcBgData, ease: "linear"});
