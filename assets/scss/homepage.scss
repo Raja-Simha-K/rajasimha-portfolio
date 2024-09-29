@@ -84,16 +84,16 @@
                 right: 0;
                 top: 50%;
                 transform: translate(0,-50%);
-                opacity: 0;
+                // opacity: 0;
             }
-            &:hover{
-                span{
-                    opacity: 0;
-                }
-                .sh-h{
-                    opacity: 1;
-                }
-            }
+            // &:hover{
+            //     span{
+            //         opacity: 0;
+            //     }
+            //     .sh-h{
+            //         opacity: 1;
+            //     }
+            // }
         }
     }
 }
