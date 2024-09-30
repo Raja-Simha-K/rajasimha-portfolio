@@ -26,6 +26,9 @@
 //     document.addEventListener('click', handleClick);
 // });
   
+
+
+
 // Star Glitter
 function getRandom(min, max) {
     return Math.random() * (max - min) + min;
