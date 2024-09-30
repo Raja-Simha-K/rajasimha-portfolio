@@ -276,14 +276,19 @@ moonEclipse.forEach(function(moonBg){
 });
 // -----------------------------------------------------------------
 
-const races = document.querySelector(".wr-b");
 
-function getScrollAmount() {
-	let racesWidth = races.scrollWidth;
-	return -(racesWidth - window.innerWidth);
-}
 
-let hzTr = gsap.timeline({
+// -----------------------------------------
+if(document.querySelector('.wr-b')){
+
+    const races = document.querySelector(".wr-b");
+    
+    function getScrollAmount() {
+        let racesWidth = races.scrollWidth;
+        return -(racesWidth - window.innerWidth);
+    }
+    
+    let hzTr = gsap.timeline({
     scrollTrigger:{
         trigger:".wr-ab",
         start:"top 18%",
@@ -294,11 +299,12 @@ let hzTr = gsap.timeline({
 });
 
 hzTr.to(races, {
-	x: getScrollAmount,
+    x: getScrollAmount,
 	duration: 3,
 	ease: "none",
 });
 
+}
 // -----------------------------------------
 
 
