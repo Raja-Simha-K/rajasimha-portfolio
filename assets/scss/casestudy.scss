@@ -1,5 +1,84 @@
 @import 'theme-default';
 
+.cs-a{
+    padding-top: 160px;
+    .row{
+        margin-bottom: 24px;
+    }
+    .cs-ac{
+        margin-bottom: 48px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        border: 1px solid $grayColor;
+        border-width: 1px;
+        border-radius: 8px;
+        div{
+            display: block;
+            width: 50%;
+            padding: 8px;
+            border: 1px solid $grayColor;
+            border-width: 0 1px 1px 0;
+            &:nth-child(even){
+                border-right:0;
+            }
+            &:last-child,
+            &:nth-last-child(2){
+                border-bottom:0;
+            }
+            span{
+                color: $grayColor;
+                margin-bottom: 16px;
+                font-size: 14px;
+            }
+            p{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .i-fw{
+        border-radius: 50px;
+        overflow: hidden;
+    }
+}
+.cs-af{
+    padding: 0;
+    position: sticky;
+    top: 2vw;
+    z-index: 99;
+    .cs-ad{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .cs-ae{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $grayColor;
+            border-radius: 50px;
+            background-color: $whiteColor;
+            overflow: hidden;
+            li{
+                border-left: 1px solid $grayColor;
+                &:first-child{
+                    border: 0;
+                }
+                a{
+                    display: block;
+                    padding: 8px 24px;
+                    min-width: 150px;
+                    text-align: center;
+                    &:hover{
+                        background-color: $accentFirst;
+                        color: $whiteColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 .aa{
     padding-top: 160px;
 }
