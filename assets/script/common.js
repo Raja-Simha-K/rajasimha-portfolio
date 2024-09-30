@@ -277,7 +277,6 @@ moonEclipse.forEach(function(moonBg){
 // -----------------------------------------------------------------
 
 const races = document.querySelector(".wr-b");
-console.log(races.offsetWidth)
 
 function getScrollAmount() {
 	let racesWidth = races.scrollWidth;
