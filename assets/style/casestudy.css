@@ -1,3 +1,81 @@
+.cs-a {
+  padding-top: 160px;
+}
+.cs-a .row {
+  margin-bottom: 24px;
+}
+.cs-a .cs-ac {
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid #ADB5BD;
+  border-width: 1px;
+  border-radius: 8px;
+}
+.cs-a .cs-ac div {
+  display: block;
+  width: 50%;
+  padding: 8px;
+  border: 1px solid #ADB5BD;
+  border-width: 0 1px 1px 0;
+}
+.cs-a .cs-ac div:nth-child(even) {
+  border-right: 0;
+}
+.cs-a .cs-ac div:last-child, .cs-a .cs-ac div:nth-last-child(2) {
+  border-bottom: 0;
+}
+.cs-a .cs-ac div span {
+  color: #ADB5BD;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+.cs-a .cs-ac div p {
+  margin-bottom: 0;
+}
+.cs-a .i-fw {
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.cs-af {
+  padding: 0;
+  position: sticky;
+  top: 2vw;
+  z-index: 99;
+}
+.cs-af .cs-ad {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cs-af .cs-ad .cs-ae {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ADB5BD;
+  border-radius: 50px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+.cs-af .cs-ad .cs-ae li {
+  border-left: 1px solid #ADB5BD;
+}
+.cs-af .cs-ad .cs-ae li:first-child {
+  border: 0;
+}
+.cs-af .cs-ad .cs-ae li a {
+  display: block;
+  padding: 8px 24px;
+  min-width: 150px;
+  text-align: center;
+}
+.cs-af .cs-ad .cs-ae li a:hover {
+  background-color: #CF7500;
+  color: #FFFFFF;
+}
+
 .aa {
   padding-top: 160px;
 }
