@@ -53,7 +53,7 @@ stars.forEach((star, index) => {
     })
     document.addEventListener("DOMContentLoaded", () => {
         lenis.on('scroll', ScrollTrigger.update)
-    });
+    }); 
     gsap.ticker.add((time)=>{
         lenis.raf(time * 1000)
     })
@@ -276,6 +276,34 @@ moonEclipse.forEach(function(moonBg){
 });
 // -----------------------------------------------------------------
 
+const races = document.querySelector(".wr-b");
+console.log(races.offsetWidth)
+
+function getScrollAmount() {
+	let racesWidth = races.scrollWidth;
+	return -(racesWidth - window.innerWidth);
+}
+
+let hzTr = gsap.timeline({
+    scrollTrigger:{
+        trigger:".wr-ab",
+        start:"top 18%",
+        end: () => `+=${getScrollAmount() * -1}`,
+        pin:true,
+        scrub:1,
+    }
+});
+
+hzTr.to(races, {
+	x: getScrollAmount,
+	duration: 3,
+	ease: "none",
+});
+
+// -----------------------------------------
+
+
+
 // -----------------------------------------------------------------
 // eclipse bg change
 let moEcBg = document.querySelectorAll('.mo-ec');
@@ -433,10 +461,14 @@ gsap.utils.toArray(".prlx img").forEach((imagePx, i) => {
 
 // ---------------------------------------------------
 // Smooth scroll
-var scBtn = document.getElementById('scrollToButton');
-scBtn.addEventListener('click', function(event) {
-    event.preventDefault;
-    const targetId = this.getAttribute('href').substring(1);
-    const targetElement = document.getElementById(targetId);
-    lenis.scrollTo(scrollToSection);
-});
+// var scBtn = document.getElementById('scrollToButton');
+// scBtn.addEventListener('click', function(event) {
+//     event.preventDefault;
+//     const targetId = this.getAttribute('href').substring(1);
+//     const targetElement = document.getElementById(targetId);
+//     lenis.scrollTo(scrollToSection);
+// });
+
+// -----------------------------------------
+
+
