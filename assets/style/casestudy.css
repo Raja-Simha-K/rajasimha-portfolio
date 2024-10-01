@@ -2,16 +2,18 @@
   padding-top: 160px;
 }
 .cs-a .row {
-  margin-bottom: 24px;
+  margin-bottom: 80px;
+  align-items: flex-end;
 }
 .cs-a .cs-ac {
-  margin-bottom: 48px;
-  display: flex;
+  width: auto;
+  display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
   border: 1px solid #ADB5BD;
   border-width: 1px;
   border-radius: 8px;
+  margin-left: auto;
 }
 .cs-a .cs-ac div {
   display: block;
@@ -74,6 +76,29 @@
 .cs-af .cs-ad .cs-ae li a:hover {
   background-color: #CF7500;
   color: #FFFFFF;
+}
+
+.cs-ba {
+  margin-top: 24px;
+}
+.cs-ba .cs-bd {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ADB5BD;
+}
+.cs-ba .cs-bd h4 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.cs-ba .cs-bd h4 span {
+  color: #CF7500;
+}
+.cs-ba .cs-bd span {
+  color: #ADB5BD;
+}
+.cs-ba .cs-bd p {
+  margin-bottom: 0;
 }
 
 .aa {
