@@ -3,16 +3,18 @@
 .cs-a{
     padding-top: 160px;
     .row{
-        margin-bottom: 24px;
+        margin-bottom: 80px;
+        align-items: flex-end;
     }
     .cs-ac{
-        margin-bottom: 48px;
-        display: flex;
+        width: auto;
+        display: inline-flex;
         align-items: center;
         flex-wrap: wrap;
         border: 1px solid $grayColor;
         border-width: 1px;
         border-radius: 8px;
+        margin-left: auto;
         div{
             display: block;
             width: 50%;
@@ -78,6 +80,29 @@
     }
 }
 
+
+.cs-ba{
+    margin-top: 24px;
+    .cs-bd{
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid $grayColor;
+        h4{
+            font-family: $secondaryFont;
+            font-weight: 400;
+            line-height: 1.4;
+            span{
+                color: $accentFirst;
+            }
+        }
+        span{
+            color: $grayColor;
+        }
+        p{
+            margin-bottom: 0;
+        }
+    }
+}
 
 .aa{
     padding-top: 160px;
