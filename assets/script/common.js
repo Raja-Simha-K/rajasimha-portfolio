@@ -480,3 +480,13 @@ gsap.utils.toArray(".prlx img").forEach((imagePx, i) => {
 // -----------------------------------------
 
 
+gsap.from(gsap.utils.toArray(".cs-ca span"), {
+    height: 0,
+    stagger: 0.2,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".cs-ca", 
+      start: 'top 30%',
+      end: 'top 10%',
+    }
+});
