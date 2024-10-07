@@ -262,12 +262,32 @@
     .cs-ga{
         width: 100%;
         display: block;
-        margin-bottom: 1vw;
-        img{
+        &>img{
             width: 100%;
             border-radius: 2vw;
             max-height: 300px;
             object-fit: cover;
+            margin-bottom: 1vw;
+        }
+        .cs-gb{
+            display: flex;
+            align-items: center;
+            gap: 1vw;
+            h4{
+                margin: 0;
+            }
+            &.right{
+                justify-content: flex-end;
+            }
+            span{
+                img{
+                    width: 120px;
+                    margin: 0;
+                }
+            }
+        }
+        &:hover{
+            color: $accentFirst;
         }
     }
 }
