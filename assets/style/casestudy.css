@@ -250,13 +250,31 @@
 .cs-g .cs-ga {
   width: 100%;
   display: block;
-  margin-bottom: 1vw;
 }
-.cs-g .cs-ga img {
+.cs-g .cs-ga > img {
   width: 100%;
   border-radius: 2vw;
   max-height: 300px;
   object-fit: cover;
+  margin-bottom: 1vw;
+}
+.cs-g .cs-ga .cs-gb {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+.cs-g .cs-ga .cs-gb h4 {
+  margin: 0;
+}
+.cs-g .cs-ga .cs-gb.right {
+  justify-content: flex-end;
+}
+.cs-g .cs-ga .cs-gb span img {
+  width: 120px;
+  margin: 0;
+}
+.cs-g .cs-ga:hover {
+  color: #CF7500;
 }
 
 .aa {
