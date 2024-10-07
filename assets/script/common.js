@@ -425,14 +425,14 @@ contentElements.forEach((el, position) => {
             trigger: el,
             start: 'top top',
             end: '+=100%',
-            scrub: true
+            scrub: true,
         }
     })
     .to(el, {
         ease: 'none',
         startAt: {filter: 'brightness(100%) contrast(100%)'},
         filter: isLast ? 'none' : 'brightness(60%) contrast(135%)',
-        yPercent: isLast ? 0 : -15,       
+        yPercent: isLast ? 0 : -15,
     }, 0);
 
 });
@@ -469,15 +469,25 @@ gsap.utils.toArray(".prlx img").forEach((imagePx, i) => {
 
 // ---------------------------------------------------
 // Smooth scroll
-// var scBtn = document.getElementById('scrollToButton');
-// scBtn.addEventListener('click', function(event) {
-//     event.preventDefault;
-//     const targetId = this.getAttribute('href').substring(1);
-//     const targetElement = document.getElementById(targetId);
-//     lenis.scrollTo(scrollToSection);
-// });
-
-// -----------------------------------------
+if(document.getElementById('scrollToButton')){
+    var scBtn = document.getElementById('scrollToButton');
+        scBtn.addEventListener('click', function(event) {
+        event.preventDefault;
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        lenis.scrollTo(targetElement);
+    });
+}
+var scBtnClass = document.querySelectorAll('.scToBtn');
+scBtnClass.forEach(el=>{
+    el.addEventListener('click', function(event) {
+        event.preventDefault;
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        lenis.scrollTo(targetElement);
+    });
+});
+    // -----------------------------------------
 
 
 gsap.from(gsap.utils.toArray(".cs-ca span"), {
