@@ -59,7 +59,8 @@
 .cs-af {
   padding: 0;
   position: sticky;
-  top: 2vw;
+  top: 6vw;
+  z-index: 9999;
 }
 @media (max-width: 991px) {
   .cs-af {
@@ -79,8 +80,6 @@
   border-radius: 50px;
   background-color: #FFFFFF;
   overflow: hidden;
-  z-index: 9999;
-  position: relative;
 }
 .cs-af .cs-ad .cs-ae li {
   border-left: 1px solid #ADB5BD;
