@@ -61,8 +61,8 @@
 .cs-af{
     padding: 0;
     position: sticky;
-    top: 2vw;
-    
+    top: 6vw;
+    z-index: 9999;
     @media (max-width:991px) {
         display: none;
     }
@@ -78,8 +78,6 @@
             border-radius: 50px;
             background-color: $whiteColor;
             overflow: hidden;
-            z-index: 9999;
-            position: relative;
             li{
                 border-left: 1px solid $grayColor;
                 &:first-child{
