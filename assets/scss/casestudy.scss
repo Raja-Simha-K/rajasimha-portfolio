@@ -97,6 +97,18 @@
         }
     }
 }
+.cs-b{
+    ul{
+        margin-left: 18px;
+        margin-bottom: 48px;
+        li{
+            list-style: numeric;
+            margin-bottom: 16px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    }
+}
 
 
 .cs-ba{
@@ -114,10 +126,45 @@
             }
         }
         span{
+            display: block;
             color: $grayColor;
         }
         p{
             margin-bottom: 0;
+        }
+        ul{
+            margin-bottom: 0;
+        }
+        &.cs-step{
+            position: relative;
+            border-bottom: 0;
+            &:before{
+                content: "";
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 8px;
+                left: -48px;
+                border: 1px solid $grayColor;
+                border-radius: 50%;
+                background-color: $whiteColor;
+                z-index: 1;
+            }
+            &:after{
+                content: "";
+                display: inline-block;
+                height: 100%;
+                border: 1px dashed $grayColor;
+                position: absolute;
+                top: 23px;
+                left: -38px;
+            }
+            &:last-child{
+                &:after{
+                    display: none;
+                }   
+            }
         }
     }
 }
@@ -136,6 +183,15 @@
             width: 100%;
             object-fit: cover;
             box-shadow: 0 0 20px rgba(0,0,0,0.10);
+        }
+    }
+    .cs-img-fw{
+        img{
+            width: 100%;
+            border-radius: 2vw;
+        }
+        & + .cs-img-fw{
+           margin-top: 24px; 
         }
     }
 }
@@ -162,14 +218,32 @@
             height: 70%;
             border: 1px solid $grayColor;
             border-radius: 8px 8px 0 0;
+            &.h-10{
+                height: 10%;
+            }
             &.h-20{
-                height: 15%;
+                height: 20%;
+            }
+            &.h-30{
+                height: 30%;
+            }
+            &.h-40{
+                height: 40%;
             }
             &.h-50{
-                height: 35%;
+                height: 50%;
             }
             &.h-60{
-                height: 55%;
+                height: 60%;
+            }
+            &.h-70{
+                height: 70%;
+            }
+            &.h-80{
+                height: 80%;
+            }
+            &.h-90{
+                height: 90%;
             }
         }
         p{
@@ -180,8 +254,10 @@
 
 .cs-d{
     .cs-db{
+        margin-top: 48px;
         img{
             width: 100%;
+            border-radius: 2vw;
         }
     }
 }
@@ -287,6 +363,9 @@
     .cs-fa{
         text-align: center;
         margin-bottom: 4vw;
+        &.left{
+            text-align: left;
+        }
         h1{
             font-size: 8vw;
             line-height: 100%;
