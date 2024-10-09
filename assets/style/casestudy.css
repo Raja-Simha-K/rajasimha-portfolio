@@ -98,6 +98,17 @@
   color: #FFFFFF;
 }
 
+.cs-b ul {
+  margin-left: 18px;
+  margin-bottom: 48px;
+}
+.cs-b ul li {
+  list-style: numeric;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 .cs-ba {
   margin-top: 24px;
 }
@@ -115,10 +126,43 @@
   color: #CF7500;
 }
 .cs-ba .cs-bd span {
+  display: block;
   color: #ADB5BD;
 }
 .cs-ba .cs-bd p {
   margin-bottom: 0;
+}
+.cs-ba .cs-bd ul {
+  margin-bottom: 0;
+}
+.cs-ba .cs-bd.cs-step {
+  position: relative;
+  border-bottom: 0;
+}
+.cs-ba .cs-bd.cs-step:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 8px;
+  left: -48px;
+  border: 1px solid #ADB5BD;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  z-index: 1;
+}
+.cs-ba .cs-bd.cs-step:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  border: 1px dashed #ADB5BD;
+  position: absolute;
+  top: 23px;
+  left: -38px;
+}
+.cs-ba .cs-bd.cs-step:last-child:after {
+  display: none;
 }
 
 .cs-img {
@@ -136,6 +180,13 @@
   width: 100%;
   object-fit: cover;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.cs-img .cs-img-fw img {
+  width: 100%;
+  border-radius: 2vw;
+}
+.cs-img .cs-img-fw + .cs-img-fw {
+  margin-top: 24px;
 }
 
 .cs-cb {
@@ -164,21 +215,43 @@
   border: 1px solid #ADB5BD;
   border-radius: 8px 8px 0 0;
 }
+.cs-cc .cs-ca span.h-10 {
+  height: 10%;
+}
 .cs-cc .cs-ca span.h-20 {
-  height: 15%;
+  height: 20%;
+}
+.cs-cc .cs-ca span.h-30 {
+  height: 30%;
+}
+.cs-cc .cs-ca span.h-40 {
+  height: 40%;
 }
 .cs-cc .cs-ca span.h-50 {
-  height: 35%;
+  height: 50%;
 }
 .cs-cc .cs-ca span.h-60 {
-  height: 55%;
+  height: 60%;
+}
+.cs-cc .cs-ca span.h-70 {
+  height: 70%;
+}
+.cs-cc .cs-ca span.h-80 {
+  height: 80%;
+}
+.cs-cc .cs-ca span.h-90 {
+  height: 90%;
 }
 .cs-cc .cs-ca p {
   margin: 0;
 }
 
+.cs-d .cs-db {
+  margin-top: 48px;
+}
 .cs-d .cs-db img {
   width: 100%;
+  border-radius: 2vw;
 }
 
 .cs-e .cs-ea {
@@ -287,6 +360,9 @@
 .cs-f .cs-fa {
   text-align: center;
   margin-bottom: 4vw;
+}
+.cs-f .cs-fa.left {
+  text-align: left;
 }
 .cs-f .cs-fa h1 {
   font-size: 8vw;
