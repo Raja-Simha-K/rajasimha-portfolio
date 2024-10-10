@@ -188,6 +188,10 @@
 .cs-img .cs-img-fw + .cs-img-fw {
   margin-top: 24px;
 }
+.cs-img .cs-img-fw.has-shadow img {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 2vw;
+}
 
 .cs-cb {
   margin-bottom: 48px;
@@ -341,6 +345,33 @@
   border: 1px solid #0A1D36;
   background-color: #f4f8fd;
 }
+.cs-e .cs-eb .cs-ec .cs-ed div span.ss-primary {
+  background-color: #7752FE;
+}
+.cs-e .cs-eb .cs-ec .cs-ed div span.ss-secondary {
+  background-color: #BA1A16;
+}
+.cs-e .cs-eb .cs-ec .cs-ed div span.ss-body-black {
+  background-color: #303030;
+}
+.cs-e .cs-eb .cs-ec .cs-ed div span.ss-body-gray {
+  background-color: #5E5E5E;
+}
+.cs-e .cs-eb .cs-ec .cs-ed div span.ss-body-bg {
+  background-color: #F5F5F5;
+}
+.cs-e .cs-eb .cs-ec .cs-ed div span.ss-accent-one {
+  background-color: #FF6B6B;
+}
+.cs-e .cs-eb .cs-ec .cs-ed div span.ss-accent-two {
+  background-color: #FFD93D;
+}
+.cs-e .cs-eb .cs-ec .cs-ed div span.ss-accent-three {
+  background-color: #6BCB77;
+}
+.cs-e .cs-eb .cs-ec .cs-ed div span.ss-accent-four {
+  background-color: #97A0C4;
+}
 .cs-e .cs-eb .cs-ec .cs-ed div p {
   margin-bottom: 0;
 }
@@ -355,6 +386,21 @@
 }
 .cs-e .cs-eb .cs-ec .is-catamaran p {
   color: #42424a;
+}
+.cs-e .cs-eb .cs-ec .is-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+.cs-e .cs-eb .cs-ec .is-montserrat .h4 {
+  display: block;
+  color: #000000;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+.cs-e .cs-eb .cs-ec .is-publicsans {
+  font-family: "Public Sans", sans-serif;
+}
+.cs-e .cs-eb .cs-ec .is-publicsans h4 {
+  font-family: "Public Sans", sans-serif;
 }
 
 .cs-f .cs-fa {
