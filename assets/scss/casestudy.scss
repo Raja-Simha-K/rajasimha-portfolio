@@ -193,6 +193,12 @@
         & + .cs-img-fw{
            margin-top: 24px; 
         }
+        &.has-shadow{
+            img{
+                box-shadow: 0 0 10px rgba(0,0,0,0.10);
+                border-radius: 2vw;
+            }
+        }
     }
 }
 
@@ -335,6 +341,33 @@
                             border: 1px solid #0A1D36;
                             background-color: #f4f8fd;
                         }
+                        &.ss-primary{
+                            background-color: #7752FE;
+                        }
+                        &.ss-secondary{
+                            background-color: #BA1A16;
+                        }
+                        &.ss-body-black{
+                            background-color: #303030;
+                        }
+                        &.ss-body-gray{
+                            background-color: #5E5E5E;
+                        }
+                        &.ss-body-bg{
+                            background-color: #F5F5F5;
+                        }
+                        &.ss-accent-one{
+                            background-color: #FF6B6B;
+                        }
+                        &.ss-accent-two{
+                            background-color: #FFD93D;
+                        }
+                        &.ss-accent-three{
+                            background-color: #6BCB77;
+                        }
+                        &.ss-accent-four{
+                            background-color: #97A0C4;
+                        }
                     }
                     p{
                         margin-bottom: 0;
@@ -353,6 +386,21 @@
                 font-family: "Catamaran", sans-serif;
                 p{
                     color: #42424a;
+                }
+            }
+            .is-montserrat{
+                font-family: "Montserrat", sans-serif;
+                .h4{
+                    display: block;
+                    color: $primaryColor;
+                    font-weight: 700;
+                    font-family: "Montserrat", sans-serif;
+                }
+            }
+            .is-publicsans{
+                font-family: "Public Sans", sans-serif;
+                h4{
+                    font-family: "Public Sans", sans-serif;    
                 }
             }
         }
