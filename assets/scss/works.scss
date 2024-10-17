@@ -158,6 +158,21 @@
 
 .wr-b{
     display: flex;
+    .no-access{
+        pointer-events: none;
+        position: relative;
+        &::before{
+            content: "Coming Soon";
+            font-family: $primaryColor;
+            color: $whiteColor;
+            font-weight: 600;
+            font-size: 32px;
+            position: absolute;
+            left: 50%;
+            top: 40%;
+            transform: translate(-50%,-50%);
+        }
+    }
     .wr-bb{
         display: block;
         width: 40vw;
