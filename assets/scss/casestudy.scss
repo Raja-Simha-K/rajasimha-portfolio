@@ -421,6 +421,14 @@
     }
     .cs-fb{
         margin-bottom: 1vw;
+        &.has-shadow{
+            padding: 1vw;
+            box-shadow: 0 0 10px rgba(0,0,0,0.10);
+            border-radius: 2vw;
+            img{
+                width: 100%;
+            }
+        }
         img{
             width: 100%;
             border-radius: 2vw;
@@ -432,12 +440,15 @@
     .cs-ga{
         width: 100%;
         display: block;
+        position: relative;
+        
         &>img{
             width: 100%;
             border-radius: 2vw;
             max-height: 300px;
             object-fit: cover;
             margin-bottom: 1vw;
+            background-color: $primaryColor;
             @media (max-width:991px) {
                 display: none;
             }
@@ -475,9 +486,21 @@
                 }
             }
         }
+        .cs-ga-soon{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            color: $whiteColor;
+            font-size: 48px;
+        }
         &:hover{
             color: $accentFirst;
         }
+        &.hidden-arrow{
+            pointer-events: none;
+        }
+        
     }
 }
 

@@ -417,6 +417,14 @@
 .cs-f .cs-fb {
   margin-bottom: 1vw;
 }
+.cs-f .cs-fb.has-shadow {
+  padding: 1vw;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 2vw;
+}
+.cs-f .cs-fb.has-shadow img {
+  width: 100%;
+}
 .cs-f .cs-fb img {
   width: 100%;
   border-radius: 2vw;
@@ -425,6 +433,7 @@
 .cs-g .cs-ga {
   width: 100%;
   display: block;
+  position: relative;
 }
 .cs-g .cs-ga > img {
   width: 100%;
@@ -432,6 +441,7 @@
   max-height: 300px;
   object-fit: cover;
   margin-bottom: 1vw;
+  background-color: #000000;
 }
 @media (max-width: 991px) {
   .cs-g .cs-ga > img {
@@ -473,8 +483,19 @@
     display: block;
   }
 }
+.cs-g .cs-ga .cs-ga-soon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFFFFF;
+  font-size: 48px;
+}
 .cs-g .cs-ga:hover {
   color: #CF7500;
+}
+.cs-g .cs-ga.hidden-arrow {
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=casestudy.css.map */
