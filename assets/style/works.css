@@ -168,6 +168,11 @@
   margin-bottom: 0;
   font-size: 10vw;
 }
+@media (max-width: 991px) {
+  .wr-a {
+    padding-top: 25vw;
+  }
+}
 
 .wr-b {
   display: flex;
@@ -178,7 +183,7 @@
 }
 .wr-b .no-access::before {
   content: "Coming Soon";
-  font-family: #000000;
+  font-family: "Neue Regrade", sans-serif;
   color: #FFFFFF;
   font-weight: 600;
   font-size: 32px;
@@ -186,6 +191,7 @@
   left: 50%;
   top: 40%;
   transform: translate(-50%, -50%);
+  white-space: nowrap;
 }
 .wr-b .wr-bb {
   display: block;
@@ -215,6 +221,45 @@
   padding: 8px 24px;
   border: 1px solid #000000;
   border-radius: 50px;
+}
+@media (max-width: 991px) {
+  .wr-b .wr-bb .wr-bd span {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+}
+@media (max-width: 991px) {
+  .wr-b .wr-bb .wr-bd span {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1270px) {
+  .wr-b {
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 24px;
+  }
+  .wr-b .wr-ba {
+    width: calc(50% - 12px);
+    margin-bottom: 24px;
+  }
+  .wr-b .wr-ba .wr-bb {
+    width: 100%;
+    margin: 0;
+  }
+  .wr-b .wr-ba .wr-bb img {
+    min-height: 180px;
+    border-radius: 8px;
+  }
+}
+@media (max-width: 767px) {
+  .wr-b {
+    gap: 0;
+  }
+  .wr-b .wr-ba {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 }
 
 /*# sourceMappingURL=works.css.map */

@@ -282,8 +282,7 @@ moonEclipse.forEach(function(moonBg){
 
 
 // -----------------------------------------
-if(document.querySelector('.wr-b')){
-
+if(document.querySelector('.wr-b') && window.innerWidth > 1279){
     const races = document.querySelector(".wr-b");
     
     function getScrollAmount() {
@@ -292,21 +291,20 @@ if(document.querySelector('.wr-b')){
     }
     
     let hzTr = gsap.timeline({
-    scrollTrigger:{
-        trigger:".wr-ab",
-        start:"top 18%",
-        end: () => `+=${getScrollAmount() * -1}`,
-        pin:true,
-        scrub:1,
-    }
-});
+        scrollTrigger:{
+            trigger:".wr-ab",
+            start:"top 18%",
+            end: () => `+=${getScrollAmount() * -1}`,
+            pin:true,
+            scrub:1,
+        }
+    });
 
-hzTr.to(races, {
-    x: getScrollAmount,
-	duration: 3,
-	ease: "none",
-});
-
+    hzTr.to(races, {
+        x: getScrollAmount,
+        duration: 3,
+        ease: "none",
+    });
 }
 // -----------------------------------------
 
@@ -490,13 +488,15 @@ scBtnClass.forEach(el=>{
     // -----------------------------------------
 
 
-gsap.from(gsap.utils.toArray(".cs-ca span"), {
-    height: 0,
-    stagger: 0.2,
-    duration: 2,
-    scrollTrigger: {
-      trigger: ".cs-ca", 
-      start: 'top 30%',
-      end: 'top 10%',
-    }
-});
+if(document.querySelector('.cs-ca')){
+    gsap.from(gsap.utils.toArray(".cs-ca span"), {
+        height: 0,
+        stagger: 0.2,
+        duration: 2,
+        scrollTrigger: {
+            trigger: ".cs-ca", 
+            start: 'top 30%',
+            end: 'top 10%',
+        }
+    });
+}
