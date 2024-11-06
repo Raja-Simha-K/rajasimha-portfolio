@@ -304,6 +304,7 @@
 }
 @media (max-width: 991px) {
   .cs-e .cs-eb .cs-ec .cs-ed {
+    flex-wrap: wrap;
     gap: 24px;
   }
 }
@@ -490,6 +491,11 @@
   transform: translate(-50%, -50%);
   color: #FFFFFF;
   font-size: 48px;
+}
+@media (max-width: 991px) {
+  .cs-g .cs-ga .cs-ga-soon {
+    display: none;
+  }
 }
 .cs-g .cs-ga:hover {
   color: #CF7500;

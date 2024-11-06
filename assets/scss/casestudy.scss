@@ -307,6 +307,7 @@
                 display: flex;
                 gap: 2vw;
                 @media (max-width:991px) {
+                    flex-wrap: wrap;
                     gap: 24px;
                 }
                 div{
