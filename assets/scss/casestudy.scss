@@ -345,11 +345,15 @@
         .cs-ec {
             display: flex;
             gap: 16px;
-            font-family: var(--brand-font);
+
 
             @media (max-width:991px) {
                 flex-wrap: wrap;
                 gap: 0;
+            }
+
+            .cs-eca {
+                font-family: var(--brand-font);
             }
 
             span {
