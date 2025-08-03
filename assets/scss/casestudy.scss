@@ -352,8 +352,10 @@
                 gap: 0;
             }
 
-            .cs-eca p {
-                font-family: var(--brand-font);
+            .cs-eca {
+                p {
+                    font-family: var(--brand-font);
+                }
             }
 
             span {
