@@ -289,12 +289,12 @@
     gap: 0;
   }
 }
+.cs-e .cs-eb .cs-ec .cs-eca p {
+  font-family: var(--brand-font);
+}
 .cs-e .cs-eb .cs-ec span {
   min-width: 100px;
   color: #ADB5BD;
-}
-.cs-e .cs-eb .cs-ec .cs-eca {
-  margin-top: 2vw;
 }
 .cs-e .cs-eb .cs-ec .cs-ed {
   width: 100%;
